@@ -66,7 +66,7 @@ def all_supplies_in_holidays(holiday_hash)
         |word| word.capitalize 
         
       }.join(' ')
-      y = inner_value.join(", ")
+      y = y.join(", ")
       #Bring back together
       puts "  #{x}: #{y}"
     end 
