@@ -61,8 +61,8 @@ def all_supplies_in_holidays(holiday_hash)
   String keystring = key.to_s
   puts "#{keystring.capitalize}:"
      holiday_hash.each do |x, y|
-      puts "  #{holiday.to_s.split("_").collect do |w| 
-        w.capitalize.join(" ")}: #{supplies.join(", ")}"
+      puts "  #{x.to_s.split("_").collect do |y| 
+       y.capitalize.join(" ")}: #{supplies.join(", ")}"
     end
   end
 end	
