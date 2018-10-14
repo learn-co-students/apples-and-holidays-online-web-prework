@@ -60,11 +60,15 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   holiday_hash.each do |key, value|
     puts "#{key.capitalize}:"
-    value.each do |inner_key, inner_value|
-      inner_key = inner_key.to_s.split("_")
-      inner_key = inner_key.map {|word| word.capitalize }.join(' ')
-      inner_value = inner_value.join(", ")
-      puts "  #{inner_key}: #{inner_value}"
+    value.each do |x, y|
+      x = x.to_s.split("_")
+      x = inner_key.map {
+        |word| word.capitalize 
+        
+      }.join(' ')
+      y = inner_value.join(", ")
+      #Bring back together
+      puts "  #{x}: #{y}"
     end 
   end
 end
