@@ -77,7 +77,7 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   newarray = []
   holiday_hash.each do |key, value|
-  y.each do |x, y|
+  y.each do |value, y|
     if y.include?("BBQ")
         newarray << holiday 
         newarray.flatten
