@@ -63,7 +63,7 @@ def all_supplies_in_holidays(holiday_hash)
     value.each do |x, y|
       x = x.to_s.split("_")
       x = x.map {
-        |z| word.capitalize 
+        |z| z,capitalize 
         
       }.join(' ')
       y = y.join(", ")
