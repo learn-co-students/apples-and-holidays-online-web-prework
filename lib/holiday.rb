@@ -1,4 +1,4 @@
-require 'pry'
+require "pry"
 
 def second_supply_for_fourth_of_july(holiday_hash)
   # given that holiday_hash looks like this:
@@ -31,7 +31,6 @@ def add_supply_to_winter_holidays(holiday_hash, supply)
     holiday_hash[:winter][key] = supply
   end
 end
-
 
 def add_supply_to_memorial_day(holiday_hash, supply)
   # again, holiday_hash is the same as the ones above
@@ -66,12 +65,10 @@ def all_supplies_in_holidays(holiday_hash)
 
   holiday_hash.each do |season, holiday|
     puts "#{season.capitalize}:"
-
     holiday.each do |holiday, supplies|
-      puts "  #{holiday.to_s.split('_').map {|w| w.capitalize }.join(' ') }: #{supplies.join(", ")}"
+      puts "  #{holiday.to_s.split("_").map(&:capitalize).join(" ")}: #{supplies.join(", ")}"
     end
   end
-
 end
 
 def all_holidays_with_bbq(holiday_hash)
@@ -88,9 +85,20 @@ def all_holidays_with_bbq(holiday_hash)
   holiday_names
 end
 
+# myhash = {
+#   :winter => {
+#     :christmas => ["Lights", "Wreath"],
+#     :new_years => ["Party Hats"],
+#   },
+#   :summer => {
+#     :fourth_of_july => ["Fireworks", "BBQ"],
+#   },
+#   :fall => {
+#     :thanksgiving => ["Turkey"],
+#   },
+#   :spring => {
+#     :memorial_day => ["BBQ"],
+#   },
+# }
 
-
-
-
-
-
+# all_supplies_in_holidays(myhash)
