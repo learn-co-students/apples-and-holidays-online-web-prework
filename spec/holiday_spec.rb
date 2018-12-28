@@ -1,3 +1,4 @@
+require 'pry'
 describe "holiday_supplies_hash" do
 # Hash of seasons, the holidays in them, and some items each holiday might have.
   let(:holiday_supplies) {
@@ -129,7 +130,7 @@ TEXT
       @output.each_line do |line|
         expect($stdout).to receive(:puts).with(line.chomp)
       end
-
+#binding.pry
       all_supplies_in_holidays(holiday_supplies)
     end
 
