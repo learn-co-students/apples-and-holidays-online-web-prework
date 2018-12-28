@@ -63,12 +63,14 @@ end
 def all_supplies_in_holidays(holiday_hash)
 holiday_hash.collect do |keys ,value1|
 value1=keys.to_s
-array=value1.split
-array.collect do |k,v|
+value1=value1.split
+binding.pry
+value1.collect do |k,v|
   k.capitalize!
-  answer=array.join
-  end
- end
+ value1=value1.join
+end
+end
+  puts value1
 end
 
   # iterate through holiday_hash and print items such that your readout resembles:
