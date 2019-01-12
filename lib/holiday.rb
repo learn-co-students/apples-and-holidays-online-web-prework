@@ -38,24 +38,38 @@ def add_supply_to_memorial_day(holiday_hash, supply)
 
 end
 
-#up to here
+#need help with add_new_holiday_with_supplies
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
-supply_array = ["Flags", "Italian Food", "Parade Floats"]
-  season = {:columbus_day => {supply_array}
-  }
-  holiday_supplies[:fall][:columbus_day] = ["Flags", "Italian Food", "Parade Floats"]
 
+supply_array = ["Flags", "Italian Food", "Parade Floats"]
+valentines_day_supplies = ["Cupid Cut-Out", "Candy Hearts"]
+  fall_holiday = {:columbus_day => supply_array}
+  winter_holiday = {:valentines_day => valentines_day_supplies}
+
+new_season = Hash.new {|season, day, supply| season[] }
+
+
+  if season == [:fall]
+    holiday_supplies[:fall] = fall_holiday
+  elsif season == [:winter]
+    holiday_supplies[:winter] = winter_holiday
+binding.pry
+  end
   # remember to return the updated hash
-  holiday_hash
+  holiday_supplies
 
 
 end
+
 
 def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season
+  winter_hol = holiday_supplies[:winter].values.flatten
+  winter_hol
 
 end
 
+#need help
 def all_supplies_in_holidays(holiday_hash)
   # iterate through holiday_hash and print items such that your readout resembles:
   # Winter:
@@ -64,6 +78,18 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
+
+holiday_supplies.each do |season, holiday|
+  season.to_s
+  holiday.collect do |holiday, item|
+    puts "#{season}:"
+      "#{holiday} #{item}"
+    end
+    holiday.capitalize
+  end
+
+
+
 
 end
 
