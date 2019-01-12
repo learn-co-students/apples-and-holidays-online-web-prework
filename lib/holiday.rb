@@ -34,29 +34,17 @@ end
 def add_supply_to_memorial_day(holiday_hash, supply)
   # again, holiday_hash is the same as the ones above
   # add the second argument to the memorial day array
-  holiday_supplies[:spring][:memorial_day] << supply
+  holiday_supplies[:spring][:memorial_day] = supply
 
 end
 
-#need help with add_new_holiday_with_supplies
+
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
 
-supply_array = ["Flags", "Italian Food", "Parade Floats"]
-valentines_day_supplies = ["Cupid Cut-Out", "Candy Hearts"]
-  fall_holiday = {:columbus_day => supply_array}
-  winter_holiday = {:valentines_day => valentines_day_supplies}
+holiday_hash[season][holiday_name] = supply_array
 
-new_season = Hash.new {|season, day, supply| season[] }
-
-
-  if season == [:fall]
-    holiday_supplies[:fall] = fall_holiday
-  elsif season == [:winter]
-    holiday_supplies[:winter] = winter_holiday
-binding.pry
-  end
-  # remember to return the updated hash
-  holiday_supplies
+# remember to return the updated hash
+  holiday_hash
 
 
 end
