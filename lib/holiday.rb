@@ -18,13 +18,24 @@ def second_supply_for_fourth_of_july(holiday_hash)
   #   }
   # }
   # return the second element in the 4th of July array
+  holiday_hash[:summer][:fourth_of_july][1]
 end
 
 def add_supply_to_winter_holidays(holiday_hash, supply)
+new_supply = "Balloons"
+holiday_hash[:winter].each {|supply| supply << new_supply
+
+
+ # binding.pry
+
   # holiday_hash is identical to the one above
+
   # add the second argument, which is a supply, to BOTH the
   # Christmas AND the New Year's arrays
-
+#it "iterates through winter holidays adds a supply to each one" do
+#      add_supply_to_winter_holidays(holiday_supplies, "Balloons")
+#      expect(holiday_supplies[:winter][:christmas]).to include("Balloons")
+ #     expect(holiday_supplies[:winter][:new_years]).to include("Balloons")
 end
 
 
