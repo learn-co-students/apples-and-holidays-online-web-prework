@@ -56,12 +56,13 @@ end
 
 def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each {|season, holiday|
-    puts "#{season.capitalize}:"
+    puts "#{season.to_s.capitalize}:"
     holiday.each {|holiday,supplies|
-      puts "#{holiday}: #{supplies}"
+      puts "  #{holiday.to_s.capitalize}: #{supplies.join(", ")}"
+      binding.pry
       }
     }
-binding.pry
+
   # Winter:
   #   Christmas: Lights, Wreath
   #   New Years: Party Hats
