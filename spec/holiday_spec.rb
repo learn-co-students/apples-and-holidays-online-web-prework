@@ -124,22 +124,21 @@ TEXT
     # For the purposes of this test, we are assuming that you decided to output your list
     # of holiday supplies line by line. If, on the other hand, you decided to output it
     # as one big chunk, comment out this test, and uncomment the one below it.
+#128-134 commented out and 135-139 put in
+    #it "should output the formatted list of holidays and their supplies" #do
+      #@output.each_line do |line|
+        #expect($stdout).to receive(:puts).with(line.chomp)
+      #end
 
-    it "should output the formatted list of holidays and their supplies" do
-      @output.each_line do |line|
-        expect($stdout).to receive(:puts).with(line.chomp)
-      end
+      #all_supplies_in_holidays(holiday_supplies)
+    #end
 
-      all_supplies_in_holidays(holiday_supplies)
-    end
-
-    # it "should output the formatted list of holidays and their supplies" do
-    #   expect($stdout).to receive(:puts).with(@output)
-    #   all_supplies_in_holidays(holiday_supplies)
-    # end
+     it "should output the formatted list of holidays and their supplies" do
+       expect($stdout).to receive(:puts).with(@output)
+       all_supplies_in_holidays(holiday_supplies)
+     end
 
   end
-
   # Question 7
   # Write a method to collect all holidays with BBQ
   describe "#all_holidays_with_bbq" do
