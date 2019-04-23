@@ -29,7 +29,7 @@ def add_supply_to_winter_holidays(holiday_hash, supply)
   holiday_hash[:winter][:christmas] << supply
   holiday_hash[:winter][:new_years] << supply
   
-  
+
 
 end
 
@@ -74,13 +74,11 @@ def all_supplies_in_holidays(holiday_hash)
     
   holiday_hash.each do |season, holiday|
     puts "#{season.capitalize}:"
-      #holiday.each do |holiday, shit|
-        holiday.each do |holiday, shit| 
-          puts "  #{holiday.to_s.split('_').map {|thing| thing.capitalize}.join(" ")}: #{shit.join(", ")}"
+      holiday.each do |holiday, shit| 
+        puts "  #{holiday.to_s.split('_').map {|thing| thing.capitalize}.join(" ")}: #{shit.join(", ")}"
       end
     end
-  
-end
+  end
 
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
