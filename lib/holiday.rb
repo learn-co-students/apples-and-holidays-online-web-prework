@@ -92,9 +92,14 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |k, v|
     puts "#{k.capitalize}:"
     v.each do |a, b|
+<<<<<<< HEAD
     #This takes a string str and splits it where the underscores, then joins toguether with a space and then capitalizes. For b it just joins them with a comma appropiately placed.
     
       puts "  #{a.to_s.split('_').map(&:capitalize).join(' ')}: " + "#{b.join(", ")}"
+=======
+    #This takes a string str and splits it where the underscores, then joins toguether with a space and then capitalizes. For b it just joins them.
+      puts "#{a.capitalize.to_s.split('_').join(' ').capitalize}:" + "#{b.join(" ")}"
+>>>>>>> e2310bcbbd96b806dc255c372924d5865afbc7f2
       
     end
  end
