@@ -38,8 +38,11 @@ end
 
 def add_supply_to_memorial_day(holiday_hash, supply)
   
-   holiday_supplies[:spring][:memorial_day] = "Grill"
-   holiday_supplies[:spring][:memorial_day] = "Table Cloth"
+
+   holiday_hash[:spring][:memorial_day] = supply
+   
+   
+   
   
  
   
@@ -51,23 +54,50 @@ def add_supply_to_memorial_day(holiday_hash, supply)
 end
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
-  holiday_supplies
   
-  holiday_supplies = [:fall][:columbus_day] 
+
+  holiday_hash[season] = {holiday_name=>supply_array}
   
-  return holiday_supplies<<
-  
-  # code here
-  # remember to return the updated hash
 
 end
 
 def all_winter_holiday_supplies(holiday_hash)
+  
+  array = []
+  array.concat(holiday_hash[:winter][:new_years])
+  array.concat(holiday_hash[:winter][:christmas])
+    array
+  
   # return an array of all of the supplies that are used in the winter season
 
 end
 
 def all_supplies_in_holidays(holiday_hash)
+    holiday_hash.each do |k,v|
+      puts  "#{k}".capitalize() + ":"
+      v.each do |k1,v1|
+        v1.collect do |item|
+          item.capitalize()
+        end
+      
+        k1String = k1.to_s
+        array = k1String.split("_")
+      
+        array.collect do |item|
+          item.capitalize!
+        end
+      
+        keyString = array.join(" ")
+     
+       string = v1.join(", ")
+     
+      puts "  " + "#{keyString}" + ": " + "#{string}"
+     
+    end
+end      
+  
+  
+  
   # iterate through holiday_hash and print items such that your readout resembles:
   # Winter:
   #   Christmas: Lights, Wreath
@@ -76,9 +106,20 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
 
-end
+end 
 
 def all_holidays_with_bbq(holiday_hash)
+  
+   array=[]
+   holiday_hash.each do |k,v|
+     v.each do |k1,v1|
+       if (v1.include?("BBQ"))
+         array.push(k1)
+      end 
+    end
+  end 
+  array
+  
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
 
