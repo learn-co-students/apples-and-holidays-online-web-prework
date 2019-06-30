@@ -115,11 +115,10 @@ def all_holidays_with_bbq(holiday_hash)
 
   holiday_hash.map { |season, holidays|
     holidays.map {|holiday,supply|
-      supply.map {|value|
-        if value =="BBQ"
-          holiday_hash[season].keys
-        end
-      }
+      if supply.include?("BBQ")
+        holiday
+        # binding.pry
+      end
     }
   }.flatten.compact #remove nil in array
 end
