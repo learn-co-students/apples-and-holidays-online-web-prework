@@ -1,0 +1,32 @@
+
+[1mFrom:[0m /home/placid-window-3704/apples-and-holidays-online-web-prework/lib/holiday.rb @ line 66 Object#all_supplies_in_holidays:
+
+    [1;34m51[0m: [32mdef[0m [1;34mall_supplies_in_holidays[0m(holiday_hash)
+    [1;34m52[0m:   holiday_string = [31m[1;31m"[0m[31m[1;31m"[0m[31m[0m
+    [1;34m53[0m:   supply_string = [31m[1;31m"[0m[31m[1;31m"[0m[31m[0m
+    [1;34m54[0m: 
+    [1;34m55[0m:   [1;34m# Winter:[0m
+    [1;34m56[0m:   [1;34m#   Christmas: Lights, Wreath[0m
+    [1;34m57[0m:   [1;34m#   New Years: Party Hats[0m
+    [1;34m58[0m:   [1;34m# Summer:[0m
+    [1;34m59[0m:   [1;34m#   Fourth Of July: Fireworks, BBQ[0m
+    [1;34m60[0m:   [1;34m# etc.[0m
+    [1;34m61[0m: 
+    [1;34m62[0m:   holiday_hash.each [32mdo[0m |season, holiday|
+    [1;34m63[0m:     season = season.to_s 
+    [1;34m64[0m:     holiday = holiday.to_s
+    [1;34m65[0m: 
+ => [1;34m66[0m:     binding.pry
+    [1;34m67[0m:     
+    [1;34m68[0m:     
+    [1;34m69[0m:     puts [31m[1;31m"[0m[31m#{season}[0m[31m:[1;31m"[0m[31m[0m
+    [1;34m70[0m:     holiday_string = [31m[1;31m"[0m[31m#{holiday}[0m[31m:[1;31m"[0m[31m[0m
+    [1;34m71[0m:     
+    [1;34m72[0m:       
+    [1;34m73[0m:     holiday.each [32mdo[0m |supply|
+    [1;34m74[0m:       puts [31m[1;31m"[0m[31m#{supply}[0m[31m index is #{supply.index}[0m[31m[1;31m"[0m[31m[0m
+    [1;34m75[0m:     [32mend[0m
+    [1;34m76[0m:   [32mend[0m
+    [1;34m77[0m: 
+    [1;34m78[0m: [32mend[0m
+
